@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  tomcat:
+    max-threads: 200
+    max-connections: 10000
+    uri-encoding: UTF-8
+    accept-count: 100
+spring:
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      maxActive: 50
+      maxIdle: 5
+      minIdle: 0
+      initialSize: 0
+      filters: stat,wall,log4j
+      validation-query: select 1
+      test-on-borrow: true
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test1?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      maxActive: 50
+      maxIdle: 5
+      minIdle: 0
+      initialSize: 0
+      filters: stat,wall,log4j
+      validation-query: select 2
+      test-on-borrow: true
+mybatis:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  type-aliases-package: com.dou.tfx.prfect.entity
