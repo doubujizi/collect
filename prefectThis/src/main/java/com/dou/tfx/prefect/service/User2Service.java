@@ -17,12 +17,14 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 public class User2Service {
     @Autowired
     private User2Mapper user2Mapper;
-    public void insetUser2(User user){
+
+    public void insetUser2(User user) {
         user2Mapper.insert(user);
         //Added this to force a roll back for testing
         TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
     }
-    public void insetUser2Exception(User user){
+
+    public void insetUser2Exception(User user) {
         user2Mapper.insert(user);
         throw new RuntimeException();
     }

@@ -1,15 +1,9 @@
 package com.dou.tfx.prefect.mq.product;
 
-import com.sun.jmx.remote.internal.ArrayQueue;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
-
-import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * @author tianfuxian
@@ -39,7 +33,7 @@ public class SyncProducer {
         }
         // 如果不再发送消息，关闭Producer实例。
         producer.shutdown();
-        
+
 
     }
 }

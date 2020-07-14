@@ -10,7 +10,7 @@ public class TestProxy {
     public static void main(String[] args) {
         IStars iStars = new Stars("tfx");
         IStars iStarsProxy = new StarsProxy(iStars);
-        for (int i = 0;i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             iStarsProxy.sing();
         }
     }

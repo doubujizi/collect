@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     private UserService userService;
-    public void aaa(){
+
+    public void aaa() {
         System.out.println(1111);
     }
 }

@@ -19,10 +19,9 @@ public class StarsNewProxy implements InvocationHandler {
     }
 
     /**
-     *
-     * @param proxy 被代理对象
+     * @param proxy  被代理对象
      * @param method 被代理对象的某个方法
-     * @param args 被代理对象某个方法接收的对象
+     * @param args   被代理对象某个方法接收的对象
      * @return
      * @throws Throwable
      */

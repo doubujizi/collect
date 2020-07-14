@@ -26,14 +26,15 @@ public class TestDataSourceService {
     @Autowired
     private User2Service user2Service;
 
-    public void aaa(){
+    public void aaa() {
         User user = user2Mapper.selectByPrimaryKey(2L);
         User user1 = userMapper.selectByPrimaryKey(2L);
         System.out.println(user);
         System.out.println(user1);
     }
+
     @Transactional
-    public void bbb(){
+    public void bbb() {
         User user = new User();
         user.setName("wangwu");
         user.setPassword("aaaa");

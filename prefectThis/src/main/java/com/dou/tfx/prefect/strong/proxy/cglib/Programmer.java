@@ -16,7 +16,8 @@ public class Programmer {
         System.out.println("Setting Name");
         this.name = name;
     }
-    public void code(){
+
+    public void code() {
         System.out.println(name + " is writing bugs.");
     }
 }

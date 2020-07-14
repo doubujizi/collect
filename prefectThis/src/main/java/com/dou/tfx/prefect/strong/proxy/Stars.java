@@ -5,7 +5,7 @@ package com.dou.tfx.prefect.strong.proxy;
  * @Description:
  * @Date: 2020/4/17 14:05
  */
-public class Stars implements IStars{
+public class Stars implements IStars {
     private String name;
 
     public Stars(String name) {
@@ -14,12 +14,12 @@ public class Stars implements IStars{
 
     @Override
     public void sing() {
-        System.out.println(getName()+"唱了一支歌");
+        System.out.println(getName() + "唱了一支歌");
     }
 
     @Override
     public void dance() {
-        System.out.println(getName()+"跳了一支舞");
+        System.out.println(getName() + "跳了一支舞");
     }
 
     public String getName() {

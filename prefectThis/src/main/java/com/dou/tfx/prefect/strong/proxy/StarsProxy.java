@@ -8,8 +8,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Date: 2020/4/17 14:08
  */
 public class StarsProxy implements IStars {
-    private  IStars stars;
-    private AtomicInteger atomicInteger = new AtomicInteger(0) ;
+    private IStars stars;
+    private AtomicInteger atomicInteger = new AtomicInteger(0);
+
     public StarsProxy(IStars stars) {
         this.stars = stars;
     }
@@ -17,7 +18,7 @@ public class StarsProxy implements IStars {
 
     @Override
     public void sing() {
-        if(atomicInteger.get()>3){
+        if (atomicInteger.get() > 3) {
             System.out.println("代理说 明星累了");
             return;
         }
@@ -29,7 +30,7 @@ public class StarsProxy implements IStars {
 
     @Override
     public void dance() {
-        if(atomicInteger.get()>3){
+        if (atomicInteger.get() > 3) {
             System.out.println("代理说 明星累了");
             return;
         }

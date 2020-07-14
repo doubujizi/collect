@@ -5,8 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
-* Created by Mybatis Generator 2020/04/28
-*/
+ * Created by Mybatis Generator 2020/04/28
+ */
 @Repository
 @Mapper
 public interface UserMapper {

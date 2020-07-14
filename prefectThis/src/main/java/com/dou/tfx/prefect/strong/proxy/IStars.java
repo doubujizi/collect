@@ -7,5 +7,6 @@ package com.dou.tfx.prefect.strong.proxy;
  */
 public interface IStars {
     void sing();
+
     void dance();
 }
