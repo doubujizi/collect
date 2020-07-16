@@ -1,10 +1,14 @@
 package com.dou.tfx.prefect.enity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Created by Mybatis Generator 2020/05/08
  */
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class User1 {
     /**
@@ -21,4 +25,8 @@ public class User1 {
      * 密码
      */
     private String password;
+
+    private Phone phone;
+
+    private String createTime;
 }

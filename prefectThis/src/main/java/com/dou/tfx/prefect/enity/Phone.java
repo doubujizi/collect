@@ -5,26 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Created by Mybatis Generator 2020/04/28
+ * @author tianfuxian
+ * @Description:
+ * @Date: 2020/7/15 16:55
  */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class User {
-    /**
-     * 自增id
-     */
+public class Phone {
     private Long id;
-
-    /**
-     * 用户名
-     */
     private String name;
-
-    /**
-     * 密码
-     */
-    private String password;
-
-    private Phone phone;
+    private String phoneNumber;
 }
