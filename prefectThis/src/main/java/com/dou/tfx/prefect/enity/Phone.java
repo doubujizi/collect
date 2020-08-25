@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @author tianfuxian
  * @Description:
@@ -16,4 +18,5 @@ public class Phone {
     private Long id;
     private String name;
     private String phoneNumber;
+    private List<Long> sellId;
 }

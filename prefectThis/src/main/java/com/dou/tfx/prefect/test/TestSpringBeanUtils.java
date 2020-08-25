@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 
 import javax.servlet.annotation.WebFilter;
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
 
 /**
  * @author tianfuxian
@@ -15,12 +16,12 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class TestSpringBeanUtils {
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
-        Phone phone = new Phone(2L,"zhangsan","111");
+        Phone phone = new Phone(2L,"zhangsan","111",null);
         //下面只是用于单独测试
         User user = new User(2L,"zhangshan","aaa",phone);
         User1 user1 = new User1();
         BeanUtils.copyProperties(user,user1);
-        user1.setPhone(new Phone(3L,"lisi","2222"));
+        user1.setPhone(new Phone(3L,"lisi","2222",null));
         System.out.println("user:"+user);
         System.out.println("user1: "+user1);
     }
