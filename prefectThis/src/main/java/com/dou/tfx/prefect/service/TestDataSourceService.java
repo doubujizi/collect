@@ -3,6 +3,7 @@ package com.dou.tfx.prefect.service;
 import com.dou.tfx.prefect.dao.User2Mapper;
 import com.dou.tfx.prefect.dao.UserMapper;
 import com.dou.tfx.prefect.enity.User;
+import com.dou.tfx.prefect.enity.UserTest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,12 @@ public class TestDataSourceService {
         User user1 = userMapper.selectByPrimaryKey(2L);
         System.out.println(user);
         System.out.println(user1);
+    }
+
+    public void ccc(){
+        UserTest userTest = userMapper.selectByPrimaryKey1();
+        System.out.println(userTest);
+        System.out.println(111);
     }
 
     @Transactional

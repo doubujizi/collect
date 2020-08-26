@@ -1,6 +1,7 @@
 package com.dou.tfx.prefect.dao;
 
 import com.dou.tfx.prefect.enity.User;
+import com.dou.tfx.prefect.enity.UserTest;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +18,7 @@ public interface UserMapper {
     int insertSelective(User record);
 
     User selectByPrimaryKey(Long id);
+    UserTest selectByPrimaryKey1();
 
     int updateByPrimaryKeySelective(User record);
 

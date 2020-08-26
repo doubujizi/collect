@@ -3,6 +3,7 @@ package com.dou.tfx.prefect.controller;
 import com.dou.tfx.prefect.enity.Phone;
 import com.dou.tfx.prefect.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/all/user")
-//@Validated
+@Validated
 public class UserController {
     @Autowired
     private UserService userService;

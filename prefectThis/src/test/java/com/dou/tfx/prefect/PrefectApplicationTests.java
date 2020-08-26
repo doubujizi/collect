@@ -25,4 +25,9 @@ public class PrefectApplicationTests {
         System.out.println(aaa[i]);
     }
 
+    @Test
+    public void contextLoads1() {
+       testDataSourceService.ccc();
+    }
+
 }
