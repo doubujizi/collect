@@ -1,6 +1,5 @@
 package com.dou.tfx.prefect.thread;
 
-import java.util.Map;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CyclicBarrier;
@@ -57,15 +56,30 @@ public class FF14 {
         dSem.release();
     }
 
-    public ConcurrentHashMap<String,Object> count(){
-        ConcurrentHashMap<String,Object> map = new ConcurrentHashMap<>();
+    public ConcurrentHashMap<String, Object> count() {
+        ConcurrentHashMap<String, Object> map = new ConcurrentHashMap<>();
         int i = dSem.availablePermits();
         int j = nSem.availablePermits();
         int k = tSem.availablePermits();
-        map.put("tSem",k);
-        map.put("nSem",j);
-        map.put("dSem",i);
+        map.put("tSem", k);
+        map.put("nSem", j);
+        map.put("dSem", i);
         return map;
 
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 1; j < nums.length; j++) {
+                if (i == j) {
+                    continue;
+                }
+                int k = nums[i] + nums[j];
+                if (k == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return null;
     }
 }
