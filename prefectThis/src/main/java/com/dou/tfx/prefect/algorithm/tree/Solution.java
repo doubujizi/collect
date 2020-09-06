@@ -1,7 +1,7 @@
 package com.dou.tfx.prefect.algorithm.tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.SQLOutput;
+import java.util.*;
 
 /**
  * @author tianfuxian
@@ -58,6 +58,37 @@ public class Solution {
         String preS = preorder[0];
         return null;
 
+    }
+    //树 利用栈实现前序遍历
+    public void preOrderWithStack(TreeNode root){
+        Stack<TreeNode> stack = new Stack<>();
+        while (root!=null || !stack.isEmpty()){
+            while (root!=null){
+                System.out.println(root.valString);
+                stack.push(root);
+                root=root.left;
+
+            }
+            if(!stack.isEmpty()){
+                root= stack.pop();
+                root= root.right;
+            }
+        }
+    }
+
+    public void levelOrderTra(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            System.out.println(node.valString);
+            if(node.left!=null){
+                queue.offer(node.left);
+            }
+            if(node.right!=null){
+                queue.offer(node.right);
+            }
+        }
     }
 
 

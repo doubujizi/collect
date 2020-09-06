@@ -21,7 +21,8 @@ public class TestSolution {
 
         Solution solution = new Solution();
         List<String> integers = solution.inorderTraversal(treeNodeA);
-        integers.forEach(System.out::println);
+        //integers.forEach(System.out::println);
+        solution.preOrderWithStack(treeNodeA);
 
 
     }
