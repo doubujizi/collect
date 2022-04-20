@@ -2,12 +2,10 @@ package com.dou.tfx.prefect.controller;
 
 import com.dou.tfx.prefect.enity.Phone;
 import com.dou.tfx.prefect.service.UserService;
+import com.dou.tfx.prefect.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -25,6 +23,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private RedisUtils redisUtils;
 
     public void aaa() {
         System.out.println(1111);
@@ -41,5 +41,13 @@ public class UserController {
     public String testValid1(@Valid @NotBlank Integer number, ArrayList<Long> sellId) {
         System.out.println(sellId.size());
         return "hello";
+    }
+
+    @GetMapping("/testRedis")
+    public String testValid1(String aaa) {
+        if(redisUtils.isActionAllowed("2011","admin","quote",10,3)){
+            return "hello";
+        }
+        return "false";
     }
 }

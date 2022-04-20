@@ -19,10 +19,10 @@
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -117,6 +117,48 @@
 <!--            <artifactId>sharding-jdbc-spring-namespace</artifactId>-->
 <!--            <version>4.1.0</version>-->
 <!--        </dependency>-->
+        <!--        netty-->
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.32.Final</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+<!--        解压ZIP-->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>5.15.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.1</version>
+        </dependency>
 
     </dependencies>
 
