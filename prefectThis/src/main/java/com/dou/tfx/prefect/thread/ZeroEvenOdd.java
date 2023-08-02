@@ -43,6 +43,7 @@ public class ZeroEvenOdd {
     }
 
     public void odd(IntConsumer printNumber) throws InterruptedException {
+        Integer  aaa  = 1;
         for (int i = 1; i <= n; i += 2) {
             semaphoreOdd.acquire();
             printNumber.accept(i);
